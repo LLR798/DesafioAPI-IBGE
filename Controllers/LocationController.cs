@@ -44,7 +44,7 @@ public class LocationController : ControllerBase
     /// <response code="200">Localidade criada com sucesso</response>
     /// <response code="401">Não autorizado</response>
     /// <response code="500">Erro provavelmente causado pelo Render, tente novamente</response>
-    [HttpGet("locations")]
+    [HttpGet]
     public async Task<ActionResult<ServiceResponse<List<Location>>>> GetAllLocations()
     {
         return Ok(await _locationService.GetAllLocations());
@@ -57,7 +57,7 @@ public class LocationController : ControllerBase
     /// <response code="200">Localidade criada com sucesso</response>
     /// <response code="401">Não autorizado</response>
     /// <response code="500">Erro provavelmente causado pelo Render, tente novamente</response>
-    [HttpGet("locations/{id}")]
+    [HttpGet("{id}")]
     public async Task<ActionResult<ServiceResponse<Location>>> GetLocationById(string id)
     {
         ServiceResponse<Location> serviceResponse = await _locationService.GetLocationById(id);
@@ -71,7 +71,7 @@ public class LocationController : ControllerBase
     /// <response code="200">Localidade criada com sucesso</response>
     /// <response code="401">Não autorizado</response>
     /// <response code="500">Erro provavelmente causado pelo Render, tente novamente</response>
-    [HttpGet("locations/state/{state}")]
+    [HttpGet("state/{state}")]
     public async Task<ActionResult<ServiceResponse<List<Location>>>> GetLocationByState(string state)
     {
         ServiceResponse<List<Location>> serviceResponse = await _locationService.GetLocationByState(state);
@@ -85,7 +85,7 @@ public class LocationController : ControllerBase
     /// <response code="200">Localidade criada com sucesso</response>
     /// <response code="401">Não autorizado</response>
     /// <response code="500">Erro provavelmente causado pelo Render, tente novamente</response>
-    [HttpGet("locations/city/{city}")]
+    [HttpGet("city/{city}")]
     public async Task<ActionResult<ServiceResponse<List<Location>>>> GetLocationByCity(string city)
     {
         ServiceResponse<List<Location>> serviceResponse = await _locationService.GetLocationByCity(city);
@@ -99,7 +99,7 @@ public class LocationController : ControllerBase
     /// <response code="200">Localidade criada com sucesso</response>
     /// <response code="401">Não autorizado</response>
     /// <response code="500">Erro provavelmente causado pelo Render, tente novamente</response>
-    [HttpPut("locations/{id}")]
+    [HttpPut("{id}")]
     public async Task<ActionResult<ServiceResponse<Location>>> UpdateLocation(Location location)
     {
         if (location.Id.Length != 7)
@@ -122,7 +122,7 @@ public class LocationController : ControllerBase
     /// <response code="204">Localidade excluida com sucesso</response>
     /// <response code="401">Não autorizado</response>
     /// <response code="500">Erro provavelmente causado pelo Render, tente novamente</response>
-    [HttpDelete("locations/{id}")]
+    [HttpDelete("{id}")]
         public async Task<ActionResult<ServiceResponse<List<Location>>>> DeleteLocation(string id)
         {
             ServiceResponse<List<Location>> serviceResponse = await _locationService.DeleteLocation(id);

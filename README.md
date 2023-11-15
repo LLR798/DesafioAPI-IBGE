@@ -5,11 +5,11 @@ Este repositório contém o código-fonte de uma Web API desenvolvida como parte
 ## Conteúdo:
 
 - [Classificação das equipes](#classificação-das-equipes)
-- [Funcionalidades da API](#funcionalidades-da-api)
-- [Requisitos](#requisitos)
-- [Configuração](#configuração)
-- [Uso](#uso)
-- [Considerações finais](#considerações-finais)
+- [Funcionalidades da API](#funcionalidades-da-api-gear)
+- [Requisitos](#requisitos-books)
+- [Configuração](#configuração-arrowforward)
+- [Uso](#uso-pencil2)
+- [Considerações finais](#considerações-finais-checkeredflag)
 
 <br>
 
@@ -137,13 +137,13 @@ A API possui as seguintes rotas:
 
 - `POST /Location/auth/register`: Registra um novo usuário.
 - `POST /Location/auth/login`: Autentica um usuário e gera um token de acesso.
-- `POST /Location/localization`: Cria uma nova localização (requer autenticação).
-- `PUT /Location/updateById/{id}`: Atualiza uma localização existente (requer autenticação).
-- `DELETE /Location/deleteById/{id}`: Exclui uma localização existente (requer autenticação).
-- `GET /Location/getAllLocations/`: Obtém todas as localizações cadastradas.
-- `GET /Location/getById/{id}`: Obtém uma localização por código.
-- `GET /Location/getByState/{state}`: Obtém localizações pela sigla do estado.
-- `GET /Location/getByCity/{city}`: Obtém localizações pela cidade.
+- `POST /Location`: Cria uma nova localização (requer autenticação).
+- `PUT /Location/{id}`: Atualiza uma localização existente (requer autenticação).
+- `DELETE /Location/{id}`: Exclui uma localização existente (requer autenticação).
+- `GET /Location`: Obtém todas as localizações cadastradas.
+- `GET /Location/{id}`: Obtém uma localização pelo Id.
+- `GET /Location/state/{state}`: Obtém localizações pela sigla do estado.
+- `GET /Location/city/{city}`: Obtém localizações pela cidade.
 
 *IMPORTANTE: Lembre-se de autenticar-se antes de usar as rotas protegidas.*
 

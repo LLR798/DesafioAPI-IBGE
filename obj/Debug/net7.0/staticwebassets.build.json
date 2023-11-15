@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gyBcj4eQWGbpYTjcDEVPHTtGzIoJi/oFaqmc/yRPDhA=",
+  "Source": "WebApiWithAuth",
+  "BasePath": "_content/WebApiWithAuth",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
